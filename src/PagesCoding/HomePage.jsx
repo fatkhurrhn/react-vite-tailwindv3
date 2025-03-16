@@ -3,6 +3,10 @@ import GitHubCalendar from "react-github-calendar";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Thumbnail1 from "../assets/thumbnail01.png"
+import Lintasarta from "../assets/lintasarta.png"
+import NF from "../assets/nf.jpg"
+import Senada from "../assets/senada.jpg"
+import Pintar from "../assets/pintar.png"
 
 export default function Page() {
     return (
@@ -20,7 +24,7 @@ export default function Page() {
                         />
                         {/* Nama & Role di sebelah foto (Mobile) */}
                         <div className="md:hidden">
-                            <h1 className="text-xl sm:text-2xl font-bold">Fatkhurrhn 🪴</h1>
+                            <h1 className="text-xl sm:text-[18px] font-bold">Fatkhurrhn 🪴</h1>
                             <p className="text-xs sm:text-sm font-mono text-[#252529] dark:text-gray-300">
                                 FrontEnd Developer
                             </p>
@@ -30,7 +34,7 @@ export default function Page() {
                     {/* Nama & Paragraf (Desktop), Paragraf (Mobile) */}
                     <div className="text-center md:text-left md:flex-1">
                         <div className="hidden md:block">
-                            <h1 className="text-2xl font-bold">Fatkhurrhn 🪴</h1>
+                            <h1 className="text-[18px] font-bold">Fatkhurrhn 🪴</h1>
                             <p className="text-sm font-mono text-[#252529] dark:text-gray-300">
                                 FrontEnd Developer
                             </p>
@@ -45,7 +49,13 @@ export default function Page() {
                 <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-[#252529] via-zinc-600 to-gray-300 dark:to-[#252529] max-w-lg mx-auto"></div>
 
                 {/* GitHub Activity */}
-                <div className="bg-gray-100 bg-zinc-900 border border-[#252529] p-5 rounded-[11px] mt-5 max-w-full overflow-x-auto">
+                <div className="flex justify-between items-center w-full">
+      <h2 className="text-[18px] font-bold">📊 GitHub Activity</h2>
+      <a href="https://github.com/fatkhurrhn" className="text-xs text-zinc-500">
+        View more
+      </a>
+    </div> <br/>
+                <div className="bg-gray-100 bg-zinc-900 border border-[#252529] p-5 rounded-[11px] max-w-full overflow-x-auto">
                     <GitHubCalendar
                         username="fatkhurrhn"
                         blockSize={11.4}
@@ -57,6 +67,7 @@ export default function Page() {
                 <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-[#252529] via-zinc-600 to-gray-300 dark:to-[#252529] max-w-lg mx-auto"></div>
 
                 {/* skills */}
+                
                 <div className="max-w-4xl text-center mb-10">
                     <ul className="flex flex-wrap justify-center gap-2 text-lg list-none p-0">
                         <li className="bg-[#18181b] text-white/90 border border-[#252529] rounded-lg py-1 px-4 hover:bg-[#1f1f24]">
@@ -101,6 +112,13 @@ export default function Page() {
                 {/* hr */}
                 <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-[#252529] via-zinc-600 to-gray-300 dark:to-[#252529] max-w-lg mx-auto"></div>
 
+                {/* project */}
+                <div className="flex justify-between items-center w-full">
+      <h2 className="text-[18px] font-bold">🛠 My Projects</h2>
+      <a href="/project" className="text-xs text-zinc-500">
+        View more
+      </a>
+    </div> <br/>
                 <div className="grid gap-2">
                     <div className="border border-[#252529] bg-[#141417] rounded-xl sm:flex items-center">
                         <div className="p-2">
@@ -114,13 +132,13 @@ export default function Page() {
                         </div>
                         <div className="p-3 w-full">
                             <div className="flex justify-between items-center">
-                                <h1 className="text-2xl font-black">Personal Website</h1>
+                                <h1 className="text-[18px] font-black">Personal Website</h1>
                                 <a
                                     target="_blank"
                                     href="https://fatkhurrhn.vercel.app/"
                                     className="border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] duration-200 px-5 py-2 flex items-center rounded-lg text-zinc-400 gap-2"
                                 >
-                                    <i className="ri-link-m" /> Preview
+                                    <i className="ri-a-m" /> Preview
                                 </a>
                             </div>
                             <hr className="border-1 border-[#252529] border-dashed my-3" />
@@ -139,19 +157,274 @@ export default function Page() {
                             </div>
                             <hr className="border-1 border-[#252529] border-dashed my-3 text-justify" />
                             <p>
-                            Personal portfolio built with React.js and Tailwind, showcasing my skills, projects, and experience in front-end development.
+                                Personal portfolio built with React.js and Tailwind, showcasing my skills, projects, and experience in front-end development.
                             </p>
                         </div>
                     </div>
-                    {/* Add other projects here if needed */}
                 </div>
 
                 {/* hr */}
                 <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-[#252529] via-zinc-600 to-gray-300 dark:to-[#252529] max-w-lg mx-auto"></div>
 
-            </section>
+                {/* sertifikat */}
+                <div className="flex justify-between items-center w-full">
+      <h2 className="text-[18px] font-bold">📜 My Certificates</h2>
+      <a href="/certificate" className="text-xs text-zinc-500">
+        View more
+      </a>
+    </div> <br/>
+                <div className="grid gap-3">
+                    <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
 
-            {/* Dark Mode Toggle */}
+                        <div className="w-full bg-[#141417] rounded-lg shadow-md overflow-hidden border border-[#252529]">
+                            <div className="sertif-image">
+                                <img
+                                    src="https://fatkhurrhn.vercel.app/static/media/ml.b94e94aed1daf224a170.png"
+                                    alt="sertifikat"
+                                    className="w-full object-cover"
+                                />
+                            </div>
+                            <div className="p-3">
+                                <h3 className="text-sm font-medium text-zinc-300 text-left">
+                                    Issued Nov 2024 - Expires Nov 2027
+                                </h3>
+                                <a
+                                    href="https://www.dicoding.com/academies/658"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-2 inline-block w-full border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] text-zinc-300 hover:text-white font-medium py-2 px-3 rounded-md transition duration-200 text-center text-xs"
+                                >
+                                    View Course
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Duplikat sertifikat */}
+                        <div className="w-full hidden sm:block bg-[#141417] rounded-lg shadow-md overflow-hidden border border-[#252529]">
+                            <div className="sertif-image">
+                                <img
+                                    src="https://fatkhurrhn.vercel.app/static/media/ml.b94e94aed1daf224a170.png"
+                                    alt="sertifikat"
+                                    className="w-full object-cover"
+                                />
+                            </div>
+                            <div className="p-3">
+                                <h3 className="text-sm font-medium text-zinc-300 text-left">
+                                    Issued Nov 2024 - Expires Nov 2027
+                                </h3>
+                                <a
+                                    href="https://www.dicoding.com/academies/658"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-2 inline-block w-full border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] text-zinc-300 hover:text-white font-medium py-2 px-3 rounded-md transition duration-200 text-center text-xs"
+                                >
+                                    View Course
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="w-full hidden sm:block bg-[#141417] rounded-lg shadow-md overflow-hidden border border-[#252529]">
+                            <div className="sertif-image">
+                                <img
+                                    src="https://fatkhurrhn.vercel.app/static/media/ml.b94e94aed1daf224a170.png"
+                                    alt="sertifikat"
+                                    className="w-full object-cover"
+                                />
+                            </div>
+                            <div className="p-3">
+                                <h3 className="text-sm font-medium text-zinc-300 text-left">
+                                    Issued Nov 2024 - Expires Nov 2027
+                                </h3>
+                                <a
+                                    href="https://www.dicoding.com/academies/658"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-2 inline-block w-full border border-[#252529] bg-[#18181b] hover:bg-[#1f1f24] text-zinc-300 hover:text-white font-medium py-2 px-3 rounded-md transition duration-200 text-center text-xs"
+                                >
+                                    View Course
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                {/* hr */}
+                <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-[#252529] via-zinc-600 to-gray-300 dark:to-[#252529] max-w-lg mx-auto"></div>
+
+                {/* my experience */}
+                <div className="flex justify-between items-center w-full">
+      <h2 className="text-[18px] font-bold">💼 My Experience</h2>
+      <a href="https://www.linkedin.com/in/fatkhurrhn/" className="text-xs text-zinc-500">
+        View more
+      </a>
+    </div> <br/>
+                <div className="mt-1 sm:mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <div className="grid gap-4">
+                        <div className="rounded-xl border border-[#252529] hover:bg-[#1f1f24] bg-[141417] p-3 sm:p-4" >
+                            <div className="mb-3 sm:mb-4 flex items-center gap-3" >
+                                <img className="h-[40px] w-[40px] rounded-full" src={Lintasarta}
+                                    alt=" Company Lintasarta" />
+                                <div>
+                                    <h3 className="text-base sm:text-lg font-semibold text-left">
+                                        Company Lintasarta
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-zinc-400 text-left">
+                                        Capstone Project at Bangkit Academy
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <p className="text-sm sm:text-base text-justify">
+                                    Developed an employee recruitment website using React over two months as part of the
+                                    Capstone Project at Lintasarta, focusing on frontend development and user
+                                    experience.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="rounded-xl border border-[#252529] hover:bg-[#1f1f24] bg-[141417] p-3 sm:p-4" >
+                            <div className="mb-3 sm:mb-4 flex items-center gap-3">
+                                <img className="h-[40px] w-[40px] rounded-full" src={NF}
+                                    alt="Assistan Lecturer 2024" />
+                                <div>
+                                    <h3 className="text-base sm:text-lg font-semibold text-left">
+                                        Assistan Lecturer 2024
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-zinc-400 text-left">
+                                        STT Terpadu Nurul Fikri
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <p className="text-sm sm:text-base text-justify">
+                                    Assisted in teaching the Big Data course for one semester, helping students
+                                    understand data processing, analytics, and visualization concepts. Provided guidance
+                                    in practical assignments, facilitated discussions, and supported the lecturer in
+                                    className activities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="grid gap-4" >
+                        <div className="rounded-xl border border-[#252529] hover:bg-[#1f1f24] bg-[141417] p-3 sm:p-4" >
+                            <div className="mb-3 sm:mb-4 flex items-center gap-3">
+                                <img className="h-[40px] w-[40px] rounded-full"
+                                    src="https://files.klob.id/public/mig01/l32ovhf5/channels4_profile.jpg"
+                                    alt="Bangkit Academy 2024" />
+                                <div>
+                                    <h3 className="text-base sm:text-lg font-semibold text-left">
+                                        Bangkit Academy 2024
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-zinc-400 text-left">
+                                        Cloud Computing Cohort CC-23
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <p className="text-sm sm:text-base text-justify">
+                                    Participated in the Kampus Merdeka program for four months, focusing on the Cloud
+                                    Computing learning path.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="rounded-xl border border-[#252529] hover:bg-[#1f1f24] bg-[141417] p-3 sm:p-4" >
+                            <div className="mb-3 sm:mb-4 flex items-center gap-3">
+                                <img className="h-[40px] w-[40px] rounded-full" src={Senada}
+                                    alt="Head of the Quran Program Department" />
+                                <div>
+                                    <h3 className="text-base sm:text-lg text-left font-semibold">
+                                        Leader of the PQ
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-left text-zinc-400">
+                                        LDK Senada STT NF
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <p className="text-sm sm:text-base text-justify">
+                                    an Islamic organization on the STT Nurul Fikri campus
+                                </p>
+                            </div>
+                        </div>
+                        <div className="rounded-xl border border-[#252529] hover:bg-[#1f1f24] bg-[141417] p-3 sm:p-4" >
+                            <div className="mb-3 sm:mb-4 flex items-center gap-3">
+                                <img className="h-[40px] w-[40px] rounded-full" src={Pintar}
+                                    alt="Freelance Translator" />
+                                <div>
+                                    <h3 className="text-base sm:text-lg text-left font-semibold">
+                                        Freelance Translator
+                                    </h3>
+                                    <p className="text-xs sm:text-sm text-left text-zinc-400">
+                                        Malay translator at PINTAR
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-4">
+                                <p className="text-sm sm:text-base text-justify">
+                                    Translated Malay language documents for two months at PINTAR.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* hr */}
+                <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-[#252529] via-zinc-600 to-gray-300 dark:to-[#252529] max-w-lg mx-auto"></div>
+
+                {/* blog */}
+            <div className="flex justify-between items-center w-full">
+      <h2 className="text-[18px] font-bold">✍️ Latest Blogs</h2>
+      <a href="/blog" className="text-xs text-zinc-500">
+        View more
+      </a>
+    </div>
+    {/* Single Blog Card (Full Width) */}
+  <div className="w-full mt-5">
+    <div className="border border-[#252529] bg-[#141417] p-5 rounded-xl">
+      <div className="flex flex-col sm:flex-row justify-between gap-5">
+        {/* Left Side (Icon + Info) */}
+        <div className="flex gap-3">
+          <div className="h-14 w-14 border border-[#252529] bg-[#1a1a1e] rounded-xl flex items-center justify-center text-[18px]">
+            🥶
+          </div>
+          <div className="mt-1">
+            <a href="#" className="text-lg font-black flex gap-2">
+Tailwind UI is now Tailwind Plus
+              <div className="block sm:hidden text-sm bg-[#18181b] border border-[#252529] rounded px-1 py-0.5 text-zinc-500">
+                # Gear
+              </div>
+            </a>
+            <ul className="text-zinc-400 flex items-center gap-2 text-sm">
+              <li>2 min read</li>
+              <div className="bg-zinc-400 rounded-full h-[3px] w-[3px] aspect-square"></div>
+              <li>28 Jan 2025</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Tags */}
+<ul className="sm:flex gap-1 hidden">
+  <li>
+    <a
+      className="text-sm bg-[#18181b] border border-[#252529] rounded px-2 py-1 text-zinc-500 hover:bg-[#252529] transition"
+      href="#"
+    >
+      # programmer
+    </a>
+  </li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+
+
+            {/* hr */}
+            <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-[#252529] via-zinc-600 to-gray-300 dark:to-[#252529] max-w-lg mx-auto"></div>
+
+            </section>
             <Footer />
         </div>
     );

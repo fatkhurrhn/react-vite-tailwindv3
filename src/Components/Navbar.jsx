@@ -15,11 +15,11 @@ const Navbar = () => {
                 </button>
 
                 <ul className="hidden md:flex space-x-8 font-medium text-gray-900 dark:text-white">
-                    <li><a href="#" className="hover:text-blue-700">Home</a></li>
-                    <li><a href="#" className="hover:text-blue-700">Project</a></li>
-                    <li><a href="#" className="hover:text-blue-700">Certificate</a></li>
-                    <li><a href="#" className="hover:text-blue-700">Writings</a></li>
-                    <li><a href="#" className="hover:text-blue-700">Guestbook</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Certificate</a></li>
+                    <li><a href="#">Writings</a></li>
+                    <li><a href="#">Guestbook</a></li>
                 </ul>
 
                 {/* Contact Me Button */}
