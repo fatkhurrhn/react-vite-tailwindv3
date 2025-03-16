@@ -5,7 +5,7 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-            <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+            <div className="max-w-4xl mx-auto flex items-center justify-between px-3 py-4">
                 {/* Hamburger Menu Button (Mobile) */}
                 <button
                     onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -13,21 +13,6 @@ const Navbar = () => {
                 >
                     <i className="ri-menu-2-line"></i>
                 </button>
-
-                {/* Logo & Title (Desktop) */}
-                <a
-                    href="https://flowbite.com/"
-                    className="hidden md:flex items-center space-x-3 rtl:space-x-reverse"
-                >
-                    <img
-                        src="https://flowbite.com/docs/images/logo.svg"
-                        className="h-8"
-                        alt="Flowbite Logo"
-                    />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        Flowbite
-                    </span>
-                </a>
 
                 <ul className="hidden md:flex space-x-8 font-medium text-gray-900 dark:text-white">
                     <li><a href="#" className="hover:text-blue-700">Home</a></li>
@@ -50,7 +35,7 @@ const Navbar = () => {
             <div
                 className={`fixed top-0 left-0 h-full w-2/3 bg-gray-900 text-white transform ${
                     isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-                } transition-transform duration-300 ease-in-out z-30`}
+                } transition-transform duration-300 ease-in-out z-30 px-6`}
             >
                 {/* Close Button */}
                 <button
@@ -61,7 +46,7 @@ const Navbar = () => {
                 </button>
 
                 {/* Sidebar Menu */}
-                <ul className="mt-16 space-y-6 px-6">
+                <ul className="mt-16 space-y-6">
                     <li><a href="#" className="block text-lg hover:text-blue-400">Home</a></li>
                     <li><a href="#" className="block text-lg hover:text-blue-400">Project</a></li>
                     <li><a href="#" className="block text-lg hover:text-blue-400">Certificate</a></li>

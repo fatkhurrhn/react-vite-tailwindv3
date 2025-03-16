@@ -1,13 +1,13 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function DarkMode() {
-  // Pastikan state langsung membaca dari localStorage tanpa delay
+  // Baca mode langsung dari localStorage
   const [darkMode, setDarkMode] = useState(
     () => localStorage.getItem("theme") === "dark"
   );
 
-  // Gunakan useLayoutEffect agar perubahan langsung terjadi sebelum render ulang
-  useLayoutEffect(() => {
+  useEffect(() => {
+    // Sinkronisasi langsung dengan <html> sebelum komponen lain membaca state
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -19,7 +19,9 @@ export default function DarkMode() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="fixed bottom-5 right-5 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
+      className="fixed bottom-5 right-5 w-12 h-12 flex items-center justify-center 
+                 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 
+                 rounded-full shadow-md hover:scale-110 transition-transform duration-300"
     >
       {darkMode ? (
         <i className="ri-moon-fill text-xl"></i>
@@ -28,4 +30,5 @@ export default function DarkMode() {
       )}
     </button>
   );
+  
 }
