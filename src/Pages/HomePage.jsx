@@ -1,23 +1,24 @@
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import Navbar from "../Components/Navbar";
+import DarkMode from "../Components/DarkMode"; // Import DarkMode
 
 export default function Page() {
   return (
-    <>
-      <section className="max-w-3xl mx-auto px-5"> {/* Membuat konten lebih ke tengah */}
-      <Navbar/>
+    <div className="bg-white dark:bg-gray-900 min-h-screen text-gray-900 dark:text-white transition-colors duration-300">
+      <Navbar />
+      <section className="max-w-3xl mx-auto px-5 pt-16">
         <div className="flex justify-between flex-col-reverse md:flex-row">
           <div className="mt-8 sm:mt-0 space-y-5 sm:w-2/3">
             <div>
-              <h1 className="text-2xl font-bold text-white">
-                Fatkhurrhn 🪴
-              </h1>
-              <p className="text-sm font-mono">FrontEnd Developer</p>
+              <h1 className="text-2xl font-bold">Fatkhurrhn 🪴</h1>
+              <p className="text-sm font-mono text-gray-700 dark:text-gray-300">
+                FrontEnd Developer
+              </p>
             </div>
-            <p>
-              I&#39;m a frontend developer specializing in building responsive
-              and user-friendly web applications. My focus is on creating clean,
+            <p className="text-gray-800 dark:text-gray-400">
+              I'm a frontend developer specializing in building responsive and
+              user-friendly web applications. My focus is on creating clean,
               efficient, and maintainable code.
             </p>
           </div>
@@ -39,13 +40,18 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Divider lebih dekat ke konten bawah */}
-        <div className="h-[1px] my-10 bg-gradient-to-r from-10% to-90% from-background via-zinc-600 to-background max-w-lg mx-auto"></div>
+        <div className="h-[1px] my-10 bg-gradient-to-r from-gray-300 dark:from-gray-700 via-zinc-600 to-gray-300 dark:to-gray-700 max-w-lg mx-auto"></div>
 
-        <div className="bg-[#18181b] border border-[#252529] p-5 rounded mt-5">
-          <GitHubCalendar username="fatkhurrhn" blockSize={9.174527726415} />
+        <div className="bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 p-5 rounded mt-5">
+          <GitHubCalendar 
+            username="fatkhurrhn" 
+            blockSize={9.17} 
+            colorScheme="dark" // Agar kalender GitHub ikut menyesuaikan
+          />
         </div>
       </section>
-    </>
+
+      <DarkMode /> {/* Tambahkan komponen DarkMode */}
+    </div>
   );
 }
